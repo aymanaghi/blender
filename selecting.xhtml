@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Selecting</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/epub.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/epub_overrides.css" /> 
+  </head><body>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <section id="selecting">
+<h1>Selecting</h1>
+<p>The active sequence strip is displayed with a light outline.
+The <em>entire</em> strip could be selected by clicking <kbd class="kbd docutils literal notranslate">LMB</kbd> in the middle of the strip.</p>
+<section id="select-menu">
+<h2>Select Menu</h2>
+<p>The Select menu lets you select strips in different ways.</p>
+<dl class="simple" id="bpy-ops-sequencer-select-all">
+<dt>All <kbd class="kbd docutils literal notranslate">A</kbd></dt><dd><p>Selects all the strips in the timeline.</p>
+</dd>
+<dt>None <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">A</kbd></kbd></dt><dd><p>Deselects all the strips in the timeline.</p>
+</dd>
+<dt>Invert <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd></kbd></dt><dd><p>Inverts the current selection.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-ops-sequencer-select-box">
+<dt>Box Select <kbd class="kbd docutils literal notranslate">B</kbd></dt><dd><p>See <a class="reference internal" href="../../../interface/selecting.xhtml#bpy-ops-select-box"><span class="std std-ref">Box Select</span></a>.</p>
+</dd>
+<dt>Box Select (Include Handles) <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">B</kbd></kbd></dt><dd><p>Works like <em>Box Select</em>, but also selects any strip handles inside the box. If a strip has only
+one handle selected, dragging it will change the strip’s length. (If both handles are selected,
+the complete strip moves instead.)</p>
+</dd>
+</dl>
+<dl id="bpy-ops-sequencer-select-grouped">
+<dt>Select Grouped <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">G</kbd></kbd></dt><dd><p>Select strips that are similar to the active strip. By default, unsimilar strips are
+deselected, but this can be changed in the <a class="reference internal" href="../../../interface/undo_redo.xhtml#bpy-ops-screen-redo-last"><span class="std std-ref">Adjust Last Operation</span></a>
+region.</p>
+<dl class="simple">
+<dt>Type</dt><dd><p>Select strips that have the same specific type as the active strip. For example,
+if the active strip is a Movie strip, this selects all Movie strips.</p>
+</dd>
+<dt>Global Type</dt><dd><p>Select strips that have the same general type (graphics or audio) as the active strip.</p>
+</dd>
+<dt>Effect Type</dt><dd><p>If the active strip is an effect strip, selects all effect strips. Otherwise,
+selects all non-effect strips. (Despite the name, this operator does not check
+the effect type.)</p>
+</dd>
+<dt>Data</dt><dd><p>Select strips that use the same source (file, scene, movie clip or mask) as the active strip.</p>
+</dd>
+<dt>Effect</dt><dd><p>Find the effect types that are applied to the active strip, and select all strips that have
+any of the same effect types applied to them. For example, if the active strip has a
+Gaussian Blur effect on it, this will select all other strips that are also blurred.</p>
+</dd>
+<dt>Effect/Linked</dt><dd><p>Select strips that are on a lower channel than a selected strip and overlap it in time;
+then, effect strips linked to the selected content strips; and finally, content strips
+linked to the selected effect strips.</p>
+</dd>
+<dt>Overlap</dt><dd><p>Select strips that partially or completely overlap the active strip in time.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<span id="bpy-ops-sequencer-select-less"></span><span id="bpy-ops-sequencer-select-more"></span><dl class="simple" id="bpy-ops-sequencer-select-linked">
+<dt>Select Linked</dt><dd><dl class="simple">
+<dt>All <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">L</kbd></kbd> / Less <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">NumpadMinus</kbd></kbd> / More <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">NumpadPlus</kbd></kbd></dt><dd><p>Add/remove neighboring strips to/from the selection.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="simple" id="bpy-ops-sequencer-select-side-of-frame">
+<dt>Side of Frame</dt><dd><dl class="simple">
+<dt>Left/Right <kbd class="kbd docutils literal notranslate">[</kbd>/<kbd class="kbd docutils literal notranslate">]</kbd></dt><dd><p>Select the strips that lie completely to the left or right of the current frame.</p>
+</dd>
+<dt>Current</dt><dd><p>Select the strips that intersect the current frame.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="simple" id="bpy-ops-sequencer-select-handles">
+<dt>Handle</dt><dd><dl class="simple">
+<dt>Both, Left, Right</dt><dd><p>Select the left, right, or both handles of the selected strips.</p>
+</dd>
+<dt>Both/Left/Right Neighbor</dt><dd><p>Select the handle of the neighboring strip to the left, right, or on both sides of the selected strips.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="simple" id="bpy-ops-sequencer-select-side">
+<dt>Channel</dt><dd><p>Select all the strips that are in the same channels as the currently selected strips.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>
